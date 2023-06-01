@@ -1,10 +1,18 @@
 @charset "utf-8"; /*declaração inical da folha de estilo, não esquecer novamente de indicar utf-8 entre aspas duplas. */
 
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Srisakdi&display=swap');
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans serif;/*declaração de variavel no css para inserção de fontes*/
+    --fonte2:  'Passions Conflict', cursive;
+    --fonte3: 'Srisakdi', cursive;
+
+}
 *{
     margin: 0px;
     padding: 0px;
 } /*configurações gerais para resetar todos os elementos para configuração durante o desenvolvimento do site, seção por seção*/
 html, body{
+    font-family: var(--fonte1);
    min-height: 100vh; /*Tamanho mínimo do meu html e body é 100% da viewport height(" altura espessura")*/
     background-color: darkgray;   
 }
@@ -14,6 +22,8 @@ color: white;
 text-align: center;
 }/*configurando estilo do cabeçalho da página*/
 header > h1{
+    font-family: var(--fonte2); /*para colocar a variavel da fonte na fonte selecionada basta declarar "font-family: var"  e selecionar a desejada.*/
+    font-size: 8em;/*tamanho da fonte. Cada em é 16px se me lembro bem*/
     padding-top: 50px; /*(espaçamento superior em relação ao cabeçalho)*/
     text-decoration: small-caps ;/*tranformando o texto de h1 em todas maiúsculas, e as letras inicias das palavras maiores que o restante das outras letras*/
 }
@@ -35,18 +45,23 @@ section{
     padding-bottom: 10vh/*configuração para as sections como um todo*/
     line-height: 2em; /*espaçamento entre as linhas*/
     padding-left: 30px; /*colocando texto da seleção mais afastado da borda esquerda*/
+    font-size:5vh; /*tamanho percentual em relação à tela*/
 }
 section.normal{
 background-color: white;
 color: black;
+font-family: var(--fonte2);
+font-size: 3em;
 }/*configuração da seção normal*/
 
 section.imagem{
+    
 background-color: rgb(28, 27, 27);
 color: white;
 }/*configuração da seção imagem*/
 section.imagem > p{
-    width: 400px;
+    display: inline-block;
+    padding: 5px;
     background-color: rgb(23, 22, 22);/*configurando a area do texto ( interna do section*/
 }
 footer{
