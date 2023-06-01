@@ -3,5 +3,5 @@
 .
 .
 .
-Aorendendo a criar sites e colocá-los em meu repositório.
+Aprendendo a criar sites e colocá-los em meu repositório.
 
