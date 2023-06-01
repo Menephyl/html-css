@@ -1,0 +1,58 @@
+@charset "utf-8"; /*declaração inical da folha de estilo, não esquecer novamente de indicar utf-8 entre aspas duplas. */
+
+*{
+    margin: 0px;
+    padding: 0px;
+} /*configurações gerais para resetar todos os elementos para configuração durante o desenvolvimento do site, seção por seção*/
+html, body{
+   min-height: 100vh; /*Tamanho mínimo do meu html e body é 100% da viewport height(" altura espessura")*/
+    background-color: darkgray;   
+}
+header{
+background-color: black;
+color: white;
+text-align: center;
+}/*configurando estilo do cabeçalho da página*/
+header > h1{
+    padding-top: 50px; /*(espaçamento superior em relação ao cabeçalho)*/
+    text-decoration: small-caps ;/*tranformando o texto de h1 em todas maiúsculas, e as letras inicias das palavras maiores que o restante das outras letras*/
+}
+header > p{
+    padding-bottom: 50px;/*configuração do espaçamento inferior ao cabeçalho */
+}
+header  a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+} /*configuração do link, cor do mesmo e o seu peso em negrito*/
+
+header a:hover, footer a:hover{
+text-decoration: underline;
+}/*configuração ao passar com o mouse sobre o link. Ao passar, ficará sublinhado*/
+
+section{
+    padding-top: 10vh;/*espaçamento superior 10% da altura da tela*/
+    padding-bottom: 10vh/*configuração para as sections como um todo*/
+    line-height: 2em; /*espaçamento entre as linhas*/
+    padding-left: 30px; /*colocando texto da seleção mais afastado da borda esquerda*/
+}
+section.normal{
+background-color: white;
+color: black;
+}/*configuração da seção normal*/
+
+section.imagem{
+background-color: rgb(28, 27, 27);
+color: white;
+}/*configuração da seção imagem*/
+section.imagem > p{
+    width: 400px;
+    background-color: rgb(23, 22, 22);/*configurando a area do texto ( interna do section*/
+}
+footer{
+    color: rgb(238, 227, 15);
+   background-color:black;
+   text-align: center;
+   padding: 10px;
+
+}
