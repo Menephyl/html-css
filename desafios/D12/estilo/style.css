@@ -10,6 +10,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
 } /*configurações gerais para resetar todos os elementos para configuração durante o desenvolvimento do site, seção por seção*/
 html, body{
     font-family: var(--fonte1);
@@ -20,10 +21,11 @@ header{
 background-color: black;
 color: white;
 text-align: center;
+font-family: var(--fonte1);
 }/*configurando estilo do cabeçalho da página*/
 header > h1{
-    font-family: var(--fonte2); /*para colocar a variavel da fonte na fonte selecionada basta declarar "font-family: var"  e selecionar a desejada.*/
-    font-size: 8em;/*tamanho da fonte. Cada em é 16px se me lembro bem*/
+      font-family: var(--fonte2); /*para colocar a variavel da fonte na fonte selecionada basta declarar "font-family: var"  e selecionar a desejada.*/
+    font-size: 10vw;/*tamanho da fonte view weight.*/
     padding-top: 50px; /*(espaçamento superior em relação ao cabeçalho)*/
     text-decoration: small-caps ;/*tranformando o texto de h1 em todas maiúsculas, e as letras inicias das palavras maiores que o restante das outras letras*/
 }
@@ -43,27 +45,52 @@ text-decoration: underline;
 section{
     padding-top: 10vh;/*espaçamento superior 10% da altura da tela*/
     padding-bottom: 10vh/*configuração para as sections como um todo*/
-    line-height: 2em; /*espaçamento entre as linhas*/
+    line-height 2em; /*espaçamento entre as linhas*/
     padding-left: 30px; /*colocando texto da seleção mais afastado da borda esquerda*/
-    font-size:5vh; /*tamanho percentual em relação à tela*/
+    font-size:3.5vh; /*tamanho percentual em relação à tela*/
+}
+section > p{
+    padding-bottom: 2em; /*espaçamento entre as estrofes*/
 }
 section.normal{
 background-color: white;
 color: black;
 font-family: var(--fonte2);
 font-size: 3em;
+font-weight: normal;
 }/*configuração da seção normal*/
 
 section.imagem{
-    
-background-color: rgb(28, 27, 27);
+background-color: rgba(28, 27, 27, 0.361);
 color: white;
+box-shadow: inset 6px 6px 13px 0px black; /*sombra na caixa seção imagem*/
+background-size: cover;
+background-attachment: fixed; /*Efeito parallax - fixação de*/
+
 }/*configuração da seção imagem*/
+
 section.imagem > p{
+    font-family: var(--fonte3);
     display: inline-block;
     padding: 5px;
-    background-color: rgb(23, 22, 22);/*configurando a area do texto ( interna do section*/
+    background-color: rgba(23, 22, 22, 0.431);/*configurando a area do texto ( interna do section*/
+    text-shadow: 2px 2px black; /*sombra no texo superior e inferior preto*/
+    
 }
+    
+
+section#img01{
+background-image: url('../imagens/background003.jpg');
+background-position: right center;
+
+}
+section#img02{
+background-image: url('../imagens/background002.jpg');
+
+background-size: cover;
+}/*inserção de imagem como plano de fundo na seção.
+A imagem inserida irá se adaptar de modo que exiba ela toda*/
+
 footer{
     color: rgb(238, 227, 15);
    background-color:black;
