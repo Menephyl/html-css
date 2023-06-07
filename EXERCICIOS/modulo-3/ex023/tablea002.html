@@ -19,6 +19,13 @@
             border: 1px solid black;
             padding: 10px;
         }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            color: black;
+        }
         thead, tfoot{
             background-color: gray;
             color: white;
@@ -36,6 +43,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES 
         TABLE 
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -44,10 +52,16 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>
+            População das unidades federativas 
+        </caption>
         <thead>
             <tr>
-                <th>Estado_Valor aproximado para 2022</th>
-                <th>População</th>
+                <th scope="col">Estado_Valor aproximado para 2022</th>
+                <th scope="col" style="width:50px">População</th> <!--
+                    SE FOR UM DADO, TD. 
+                    SE FOR UM TITULO, TH.
+                -->
             </tr>
         </thead>
         <tbody>
@@ -160,7 +174,9 @@
             </tr>
         </tbody>
         <tfoot>
-            <tr>
+            <tr scope="row"> <!--
+                ORGANIZAÇÃO DOS DADOS DA TABELA, BEM COMO TH TR E TD DE FORMA COERENTE
+            -->
                 <th>TOTAL DE HABITANTES - VALOR APROXIMADO DO EXATO</th>
                 <td class="num"><strong>213 317 639</strong></td> 
             </tr>
