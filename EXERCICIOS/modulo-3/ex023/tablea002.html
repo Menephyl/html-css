@@ -15,6 +15,7 @@
             espaçamento entre borda, com essa função, não terá espaço entre as células da minha tabela
             */
             /*como se CONGELASSE CÉLULAS NO EXCEL, FARÁ COM OS THS ESTADO E POPULAÇÃO*/
+            position:relative;
         }
         td, th{
             border: 1px solid black;
@@ -31,6 +32,15 @@
             background-color: rgb(17, 16, 16);
             color: white;
             width: 100px;
+        }
+        thead >tr > th{ /*EFEITO CONGELAMENTO DE CELULA
+            POSITION : STICKY
+            TOP: PIXEL REFERENTE AO POSIÇÃO DAS CELULAS(THS)
+            BACKGROUND-COLOR > MESMO DO THEAD DA TABELA  
+            */
+            position: sticky;
+            top: -1px;
+            background-color:  rgb(17, 16, 16);
         }
         tbody > tr:nth-child(odd){/*
             EFEITO ZEBRADO - AINDA É NECESSARIO PRATICAR PARA ENTENDER-
@@ -197,5 +207,23 @@
         </tr>
         </tfoot>
     </table>
-   
+   <p> 
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero ad doloremque illum explicabo. Explicabo distinctio quod maxime ullam nobis! Expedita ut facere facilis reprehenderit temporibus labore! Eveniet, dicta quo.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dicta quis et autem expedita repudiandae a porro omnis, ipsam error repellendus sed placeat natus laboriosam temporibus minima perferendis delectus aliquam!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. At sit temporibus quae excepturi illo, maxime voluptate eos ipsa nihil inventore harum? Eos esse, dolores voluptatum ipsam ipsa nemo magnam eaque!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et provident suscipit porro consectetur soluta voluptatibus vel placeat aspernatur ipsam aut sit, velit temporibus facere eius iste odit architecto quaerat. Quidem!
+   </p>
+   <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero ad doloremque illum explicabo. Explicabo distinctio quod maxime ullam nobis! Expedita ut facere facilis reprehenderit temporibus labore! Eveniet, dicta quo.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dicta quis et autem expedita repudiandae a porro omnis, ipsam error repellendus sed placeat natus laboriosam temporibus minima perferendis delectus aliquam!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. At sit temporibus quae excepturi illo, maxime voluptate eos ipsa nihil inventore harum? Eos esse, dolores voluptatum ipsam ipsa nemo magnam eaque!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et provident suscipit porro consectetur soluta voluptatibus vel placeat aspernatur ipsam aut sit, velit temporibus facere eius iste odit architecto quaerat. Quidem!
+   </p>
+   <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero ad doloremque illum explicabo. Explicabo distinctio quod maxime ullam nobis! Expedita ut facere facilis reprehenderit temporibus labore! Eveniet, dicta quo.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dicta quis et autem expedita repudiandae a porro omnis, ipsam error repellendus sed placeat natus laboriosam temporibus minima perferendis delectus aliquam!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. At sit temporibus quae excepturi illo, maxime voluptate eos ipsa nihil inventore harum? Eos esse, dolores voluptatum ipsam ipsa nemo magnam eaque!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et provident suscipit porro consectetur soluta voluptatibus vel placeat aspernatur ipsam aut sit, velit temporibus facere eius iste odit architecto quaerat. Quidem!
+   </p>
+      
    </body>
