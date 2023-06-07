@@ -14,6 +14,7 @@
             border-collapse: collapse;/*
             espaçamento entre borda, com essa função, não terá espaço entre as células da minha tabela
             */
+            /*como se CONGELASSE CÉLULAS NO EXCEL, FARÁ COM OS THS ESTADO E POPULAÇÃO*/
         }
         td, th{
             border: 1px solid black;
@@ -27,9 +28,17 @@
             color: black;
         }
         thead, tfoot{
-            background-color: gray;
+            background-color: rgb(17, 16, 16);
             color: white;
-            width: 200px;
+            width: 100px;
+        }
+        tbody > tr:nth-child(odd){/*
+            EFEITO ZEBRADO - AINDA É NECESSARIO PRATICAR PARA ENTENDER-
+            2n-1*/
+            background-color: white; 
+        }
+        tbody > tr:nth-child(even)/*2n*/{
+            background-color: lightgrey;
         }
         td.num{
             text-align: right;/*
