@@ -11,37 +11,51 @@
         }
         table{
             border-collapse: collapse;
-            width: 200;
+            width: 700px;
         }
         td{
             border: 1px solid black;
             padding: 10px;
             text-align: center;
+        
         }
     </style>
 </head>
 <body>
+    <H1>COMO DEVE FICAR: </H1>
+    <p><a href="parte_1_como deve ficar.png" target="_blank">roteiro do exercicio</a></p>
 <table>
     <tr>
-        <td>A</td>
-        <td>A1</td>
-        <td>A2</td>
-        <td>A3</td>
-        <td>a4</td>
+        <td colspan="4">A</td> <!--Expansao de coluna - A OCUPA 4-->
+        <td rowspan="4">B</td> <!--Apague primeiro as linhas da coluna que B FICARÁ( NESSE CASO, A 5ª TD DE CADA TR)-->
+       
     </tr>
     <tr>
+        <td rowspan="4">C</td>
+        <td>D</td>
         <td>E</td>
         <td>F</td>
-        <td>G</td>
-        <td>H</td>
+     
+        
     </tr>
     <tr>
+       
+        <td>G</td>
+        <td>H</td>
         <td>I</td>
-        <td>J</td>
-        <td>L</td>
-        <td>M</td>
+              
     </tr>
    
+    <td>J</td>
+    <td>L</td>
+    <td>M</td>
+    
+    </tr>
+    <tr>
+       
+        <td colspan="4">N</td>
+       
+        
     </tr>
 
 </table>
