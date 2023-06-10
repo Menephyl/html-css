@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TABELAS GRANDES</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;/*
+            espaçamento entre borda, com essa função, não terá espaço entre as células da minha tabela
+            */
+            /*como se CONGELASSE CÉLULAS NO EXCEL, FARÁ COM OS THS ESTADO E POPULAÇÃO*/
+            position:relative;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            color: black;
+        }
+        thead, tfoot{
+            background-color: rgb(17, 16, 16);
+            color: white;
+            width: 100px;
+        }
+        thead >tr > th{ /*EFEITO CONGELAMENTO DE CELULA
+            POSITION : STICKY
+            TOP: PIXEL REFERENTE AO POSIÇÃO DAS CELULAS(THS)
+            BACKGROUND-COLOR > MESMO DO THEAD DA TABELA  
+            */
+            position: sticky;
+            top: -1px;
+            background-color:  rgb(17, 16, 16);
+        }
+        tbody > tr:nth-child(odd){/*
+            EFEITO ZEBRADO - AINDA É NECESSARIO PRATICAR PARA ENTENDER-
+            2n-1*/
+            background-color: white; 
+        }
+        tbody > tr:nth-child(even)/*2n*/{
+            background-color: lightgrey;
+        }
+        td.num{
+            text-align: right;/*
+            TODO TD COM A CLASSE NUM SERÁ ALINHADO À DIREITA
+            */
+        }
+    </style>
+   </head>
+   <body>
+    <h1>USO DE TABELAS GRANDES</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES 
+        TABLE 
+            CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+    <table>
+        <caption>
+            População das unidades federativas 
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado_Valor aproximado para 2022</th>
+                <th scope="col" style="width:50px">População</th> <!--
+                    SE FOR UM DADO, TD. 
+                    SE FOR UM TITULO, TH.
+                -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">46 649 132</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 411 923</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num"> 17 463 349</td>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 985 284</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num"> 11 597 484</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num"> 11 466 630</td>
+            </tr>
+            <tr>
+                <td>Pernambuco </td>
+                <td class="num"> 9 674 793</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num"> 9 240 580</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num"> 8 777 124</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num"> 7 338 473</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 206 589</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num"> 7 153 262</td>
+            </tr>
+            <tr>
+                <td>Espirito Santo</td>
+                <td class="num"> 4 108 508</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4 059 905</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num"> 4 269 995</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num"> 3 567 234</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num"> 3 560 903</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3 289 290</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num"> 3 365 351</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num"> 3 094 325</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num"> 2 839 188</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2 338 474</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1 815 278</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1 607 363</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">906 876</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">877 613</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">652 713</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr scope="row"> <!--
+                ORGANIZAÇÃO DOS DADOS DA TABELA, BEM COMO TH TR E TD DE FORMA COERENTE
+            -->
+                <th>TOTAL DE HABITANTES - VALOR APROXIMADO DO EXATO</th>
+                <td class="num"><strong>213 317 639</strong></td> 
+            </tr>
+            <tr><td><a href="https://www.gov.br/pt-br/noticias/financas-impostos-e-gestao-publica/2021/08/populacao-brasileira-chega-a-213-3-milhoes-de-habitantes-estima-ibge" target="_blank"><strong>fonte</strong></a>
+            </td>
+            <td>
+            <a href="https://www.bing.com/ck/a?!&&p=e1d2e4a0738d3e2dJmltdHM9MTY4NjAwOTYwMCZpZ3VpZD0zZTMwNWI3My1lYWIzLTYyOTAtMDBlNS00OThhZWJjYTYzZjQmaW5zaWQ9NTMwMw&ptn=3&hsh=3&fclid=3e305b73-eab3-6290-00e5-498aebca63f4&psq=melhor+de+sao+paulo&u=a1aHR0cHM6Ly93d3cudmlhZ2Vuc2NpbmVtYXRvZ3JhZmljYXMuY29tLmJyLzIwMjAvMTAvbWVsaG9yZXMtcHJhaWFzLWRlLXNhby1wYXVsby1saXRvcmFsLXNwLmh0bWw&ntb=1" target="_blank"><strong>Melhores praias do estado de S</strong>P</a>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+   <p> 
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero ad doloremque illum explicabo. Explicabo distinctio quod maxime ullam nobis! Expedita ut facere facilis reprehenderit temporibus labore! Eveniet, dicta quo.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dicta quis et autem expedita repudiandae a porro omnis, ipsam error repellendus sed placeat natus laboriosam temporibus minima perferendis delectus aliquam!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. At sit temporibus quae excepturi illo, maxime voluptate eos ipsa nihil inventore harum? Eos esse, dolores voluptatum ipsam ipsa nemo magnam eaque!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et provident suscipit porro consectetur soluta voluptatibus vel placeat aspernatur ipsam aut sit, velit temporibus facere eius iste odit architecto quaerat. Quidem!
+   </p>
+   <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero ad doloremque illum explicabo. Explicabo distinctio quod maxime ullam nobis! Expedita ut facere facilis reprehenderit temporibus labore! Eveniet, dicta quo.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dicta quis et autem expedita repudiandae a porro omnis, ipsam error repellendus sed placeat natus laboriosam temporibus minima perferendis delectus aliquam!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. At sit temporibus quae excepturi illo, maxime voluptate eos ipsa nihil inventore harum? Eos esse, dolores voluptatum ipsam ipsa nemo magnam eaque!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et provident suscipit porro consectetur soluta voluptatibus vel placeat aspernatur ipsam aut sit, velit temporibus facere eius iste odit architecto quaerat. Quidem!
+   </p>
+   <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero ad doloremque illum explicabo. Explicabo distinctio quod maxime ullam nobis! Expedita ut facere facilis reprehenderit temporibus labore! Eveniet, dicta quo.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dicta quis et autem expedita repudiandae a porro omnis, ipsam error repellendus sed placeat natus laboriosam temporibus minima perferendis delectus aliquam!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. At sit temporibus quae excepturi illo, maxime voluptate eos ipsa nihil inventore harum? Eos esse, dolores voluptatum ipsam ipsa nemo magnam eaque!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et provident suscipit porro consectetur soluta voluptatibus vel placeat aspernatur ipsam aut sit, velit temporibus facere eius iste odit architecto quaerat. Quidem!
+   </p>
+      
+   </body>
