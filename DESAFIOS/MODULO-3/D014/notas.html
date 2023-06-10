@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,21 +11,28 @@
         }
         table{
             border-collapse: collapse;
+            
         }
 th,td{
-    background-color: rgba(128, 128, 128, 0.387);
-    border: 1px solid rgba(128, 128, 128, 0);
+    
+    border: 1px solid black;
     padding: 10px; 
+    background-color: dimgray;
+    width: 100px;
+   
 }
-th{
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
+thead{
+
 }
+tbody{
+color: black;
+}
+
     </style>
 </head>
 <body>
     <h1> MÉDIA DE NOTAS </h1>
-    <p>objetivo <a href="/DESAFIOS/MODULO-3/D014/DESAFIO_NOTAS.png">de planilha:</a></p> 
+    <p>objetivo <a href="/DESAFIOS/MODULO-3/D014/DESAFIO_NOTAS.png" target="_blank">de planilha:</a></p> 
     <!--
  COMENTARIO SOBRE OS OBJETIVOS DO DESAFIO 
  1- ESQUELETO 
@@ -35,13 +42,13 @@ th{
 5 - EFEITO ZEBRADO
  -->
  <table>
-    <thead>
-        <th rowspan="2">Área</th>
+    <thead style="color: white; font-weight: bold;">
+    <th rowspan="2">Área</th>
         <th rowspan="3">Disciplnas</th>
         <th colspan="2">Notas</th>
         <th rolspan="2">Média</th>
     </thead>    
-    <tbody>
+    <tbody style=>
         <th>Exatas</th>
     </tbody>
     <tfoot></tfoot>
