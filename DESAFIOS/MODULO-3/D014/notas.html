@@ -7,7 +7,8 @@
     <title>NOTAS</title>
     <style>
         body{
-            font-family: 'Times New Roman', Times, serif;
+            font-family: Arial, Helvetica, sans-serif;
+            
         }
         table{
             border-collapse: collapse;
@@ -17,22 +18,24 @@ th,td{
     
     border: 1px solid black;
     padding: 10px; 
-    background-color: dimgray;
     width: 100px;
-   
 }
-thead{
-
+thead,.cor1 {
+    background-color: dimgray;
+    font-weight: bolder;
+    font-size: large;
+    color:azure
 }
 tbody{
 color: black;
+background-color: white;
 }
 
-    </style>
+</style>
 </head>
 <body>
     <h1> MÉDIA DE NOTAS </h1>
-    <p>objetivo <a href="/DESAFIOS/MODULO-3/D014/DESAFIO_NOTAS.png" target="_blank">de planilha:</a></p> 
+    <p>objetivo de planilha: <a href="/DESAFIOS/MODULO-3/D014/DESAFIO_NOTAS.png" target="_blank">hm</a></p> 
     <!--
  COMENTARIO SOBRE OS OBJETIVOS DO DESAFIO 
  1- ESQUELETO 
@@ -42,14 +45,70 @@ color: black;
 5 - EFEITO ZEBRADO
  -->
  <table>
-    <thead style="color: white; font-weight: bold;">
-    <th rowspan="2">Área</th>
+    <thead>
+        <th rowspan="3">Área</th>
         <th rowspan="3">Disciplnas</th>
-        <th colspan="2">Notas</th>
-        <th rolspan="2">Média</th>
+        <th colspan="2">Notas
+        <th rowspan="3">Média</th>
+         <tr>
+            <td>Nota 1</td>
+            <td>Nota 2</td>
+        </tr>
     </thead>    
-    <tbody style=>
-        <th>Exatas</th>
+    <tbody>
+        <tr><th rowspan="4">Exatas</th>
+        <td>Matemática</td>
+        <td>0.0</td>
+        <td>0.0</td>
+        <td>0.0</td>
+        </tr>
+        <tr>
+            <td>Física</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        
+        <tr>
+            <td>Química</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        
+        <tr>
+            <td>Biologia</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+        </tr>
+        <tr>
+            <td  class="cor1" colspan="4">Média de Exatas</td>
+            <td class="cor1">0.0</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Humanas</th>
+            <td>História</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <tr>
+                <td>Geografia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+        </tr>
+        <td  class="cor1" colspan="4">Média de Humanas</td>
+            <td class="cor1">0.0</td>
+        </tr>
+        
+        
+
+        
+
+
+
     </tbody>
     <tfoot></tfoot>
 </table>
